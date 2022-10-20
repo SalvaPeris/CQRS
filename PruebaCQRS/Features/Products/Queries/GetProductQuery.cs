@@ -2,6 +2,7 @@
 using AutoMapper.QueryableExtensions;
 using MediatR;
 using PruebaCQRS.Domain;
+using PruebaCQRS.Exceptions;
 using PruebaCQRS.Infrastructure.Persistence;
 using System.Linq;
 
@@ -26,6 +27,11 @@ namespace PruebaCQRS.Features.Products.Queries
         public async Task<GetProductQueryResponse> Handle(GetProductQuery request, CancellationToken cancellationToken)
         {
             var product = await _context.Products.FindAsync(request.ProductId);
+
+            if(product == null)
+            {
+                throw new NotFoundException(nameof(Product), request.ProductId);
+            }
 
             return new GetProductQueryResponse
             {

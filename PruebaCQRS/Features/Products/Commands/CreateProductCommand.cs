@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using FluentValidation;
+using MediatR;
 using PruebaCQRS.Domain;
 using PruebaCQRS.Infrastructure.Persistence;
 
@@ -34,6 +35,14 @@ namespace PruebaCQRS.Features.Products.Commands
 
             return Unit.Value;
         }
+    }
 
+    public class CreateProductCommandValidator : AbstractValidator<CreateProductCommand>
+    {
+        public CreateProductCommandValidator()
+        {
+            RuleFor(x => x.Description).NotNull();
+            RuleFor(x => x.Price).NotNull().GreaterThan(0);
+        }
     }
 }
