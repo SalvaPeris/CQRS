@@ -29,6 +29,7 @@ namespace PruebaCQRS.Controllers
 
         // POST api/<ProductsController>
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> CreateProduct([FromBody] CreateProductCommand command)
         {
             await _mediator.Send(command);

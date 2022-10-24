@@ -10,6 +10,7 @@ using PruebaCQRS.Behaviour;
 using PruebaCQRS.Domain;
 using PruebaCQRS.Filters;
 using PruebaCQRS.Infrastructure.Persistence;
+using PruebaCQRS.Services;
 using System.Reflection;
 using System.Text;
 
@@ -85,6 +86,8 @@ builder.Services
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
         };
     });
+
+builder.Services.AddScoped<ICurrentUserService,CurrentUserService>();
 
 var app = builder.Build();
 
