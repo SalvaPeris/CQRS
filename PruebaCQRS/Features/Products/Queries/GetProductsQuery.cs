@@ -3,6 +3,7 @@ using AutoMapper.QueryableExtensions;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using PruebaCQRS.Domain;
+using PruebaCQRS.Helpers;
 using PruebaCQRS.Infrastructure.Persistence;
 
 namespace PruebaCQRS.Features.Products.Queries
@@ -30,7 +31,7 @@ namespace PruebaCQRS.Features.Products.Queries
 
     public class GetProductsQueryResponse
     {
-        public int ProductId { get; set; }
+        public string ProductId { get; set; } = string.Empty;
         public string Description { get; set; } = default!;
         public double Price { get; set; }
         public string ListDescription { get; set; } = default!;
@@ -41,6 +42,8 @@ namespace PruebaCQRS.Features.Products.Queries
     {
         public GetProductsQueryProfile() => CreateMap<Product, GetProductsQueryResponse>()
                 .ForMember(dest =>
-                    dest.ListDescription, opt => opt.MapFrom(mf => $"{mf.Description} - {mf.Price}"));
+                    dest.ListDescription, opt => opt.MapFrom(mf => $"{mf.Description} - {mf.Price}"))
+                .ForMember(dest =>
+                    dest.ProductId, opt => opt.MapFrom(mf => mf.ProductId.ToHashId()));
     }
 }

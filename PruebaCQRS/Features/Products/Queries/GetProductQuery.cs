@@ -5,12 +5,13 @@ using PruebaCQRS.Domain;
 using PruebaCQRS.Exceptions;
 using PruebaCQRS.Infrastructure.Persistence;
 using System.Linq;
+using PruebaCQRS.Helpers;
 
 namespace PruebaCQRS.Features.Products.Queries
 {
     public class GetProductQuery : IRequest<GetProductQueryResponse>
     {
-        public int ProductId { get; set; }
+        public string ProductId { get; set; } = string.Empty;
     }
 
     public class GetProductQueryHandler : IRequestHandler<GetProductQuery,GetProductQueryResponse>
@@ -26,19 +27,14 @@ namespace PruebaCQRS.Features.Products.Queries
 
         public async Task<GetProductQueryResponse> Handle(GetProductQuery request, CancellationToken cancellationToken)
         {
-            var product = await _context.Products.FindAsync(request.ProductId);
+            var product = await _context.Products.FindAsync(request.ProductId.ToString().FromHashId());
 
             if(product == null)
             {
                 throw new NotFoundException(nameof(Product), request.ProductId);
             }
 
-            return new GetProductQueryResponse
-            {
-                Description = product.Description != null ? product.Description : "",
-                ProductId = product.ProductId,
-                Price = product.Price
-            };
+            return _mapper.Map<GetProductQueryResponse>(product);
         }
     }
 
