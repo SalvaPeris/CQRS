@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using AutoMapper.QueryableExtensions;
 using MediatR;
 using ApplicationCore.Common.Domain;
 using ApplicationCore.Common.Exceptions;
