@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using PruebaCQRS.Exceptions;
+using ApplicationCore.Common.Exceptions;
 
 namespace PruebaCQRS.Filters
 {

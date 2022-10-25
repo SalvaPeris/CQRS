@@ -1,6 +1,6 @@
 ﻿using System.Security.Claims;
 
-namespace PruebaCQRS.Services
+namespace ApplicationCore.Services
 {
     public class CurrentUserService : ICurrentUserService
     {

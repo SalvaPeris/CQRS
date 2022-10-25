@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Common\" />
+    <None Remove="Infrastructure\" />
+    <None Remove="Features\" />
+    <None Remove="Common\Domain\" />
+    <None Remove="Common\Behaviour\" />
+    <None Remove="Common\Exceptions\" />
+    <None Remove="Common\Helpers\" />
+    <None Remove="Microsoft.AspNetCore.Identity" />
+    <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
+    <None Remove="Hashids.net" />
+    <None Remove="FluentValidation" />
+    <None Remove="MediatR" />
+    <None Remove="Infrastructure\Persistence\Seed\" />
+    <None Remove="Microsoft.EntityFrameworkCore.Sqlite" />
+    <None Remove="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <None Remove="AutoMapper" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Infrastructure\" />
+    <Folder Include="Features\" />
+    <Folder Include="Common\Domain\" />
+    <Folder Include="Common\Behaviour\" />
+    <Folder Include="Common\Exceptions\" />
+    <Folder Include="Common\Helpers\" />
+    <Folder Include="Infrastructure\Persistence\Seed\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.10" />
+    <PackageReference Include="Hashids.net" Version="1.6.1" />
+    <PackageReference Include="FluentValidation" Version="11.2.2" />
+    <PackageReference Include="MediatR" Version="11.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.10" />
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+  </ItemGroup>
+</Project>

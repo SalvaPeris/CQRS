@@ -2,11 +2,11 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using PruebaCQRS.Features.Auth.Command;
-using PruebaCQRS.Services;
+using ApplicationCore.Features.Auth.Command;
 using System.Runtime.Serialization;
+using ApplicationCore.Services;
 
-namespace PruebaCQRS.Controllers
+namespace API.Controllers
 {
     [Authorize]
     [Route("api/[controller]")]

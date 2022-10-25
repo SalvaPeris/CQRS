@@ -1,12 +1,10 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using PruebaCQRS.Features.Products.Queries;
-using PruebaCQRS.Features.Products.Commands;
 using Microsoft.AspNetCore.Authorization;
+using ApplicationCore.Features.Products.Queries;
+using ApplicationCore.Features.Products.Commands;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
-namespace PruebaCQRS.Controllers
+namespace API.Controllers
 {
     [Authorize]
     [Route("api/[controller]")]

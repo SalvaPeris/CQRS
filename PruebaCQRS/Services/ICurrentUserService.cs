@@ -1,4 +1,4 @@
-﻿namespace PruebaCQRS.Services
+﻿namespace ApplicationCore.Services
 {
     public interface ICurrentUserService
     {
