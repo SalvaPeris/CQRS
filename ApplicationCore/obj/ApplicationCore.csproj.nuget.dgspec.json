@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/Users/spg/Projects/PruebaCQRS/ApplicationCore/ApplicationCore.csproj": {}
+    "C:\\Users\\Salva\\Desktop\\PruebaCQRS\\ApplicationCore\\ApplicationCore.csproj": {}
   },
   "projects": {
-    "/Users/spg/Projects/PruebaCQRS/ApplicationCore/ApplicationCore.csproj": {
+    "C:\\Users\\Salva\\Desktop\\PruebaCQRS\\ApplicationCore\\ApplicationCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/spg/Projects/PruebaCQRS/ApplicationCore/ApplicationCore.csproj",
+        "projectUniqueName": "C:\\Users\\Salva\\Desktop\\PruebaCQRS\\ApplicationCore\\ApplicationCore.csproj",
         "projectName": "ApplicationCore",
-        "projectPath": "/Users/spg/Projects/PruebaCQRS/ApplicationCore/ApplicationCore.csproj",
-        "packagesPath": "/Users/spg/.nuget/packages/",
-        "outputPath": "/Users/spg/Projects/PruebaCQRS/ApplicationCore/obj/",
+        "projectPath": "C:\\Users\\Salva\\Desktop\\PruebaCQRS\\ApplicationCore\\ApplicationCore.csproj",
+        "packagesPath": "C:\\Users\\Salva\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Salva\\Desktop\\PruebaCQRS\\ApplicationCore\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/spg/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Salva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,19 +45,19 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "AutoMapper": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.0, )"
             },
             "FluentValidation": {
               "target": "Package",
-              "version": "[11.2.2, )"
+              "version": "[11.2.1, )"
             },
             "Hashids.net": {
               "target": "Package",
               "version": "[1.6.1, )"
             },
-            "MediatR": {
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[11.0.0, )"
             },
@@ -87,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100-rc.2.22477.23/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

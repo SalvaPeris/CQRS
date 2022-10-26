@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using ApplicationCore.Common.Exceptions;
 
-namespace PruebaCQRS.Filters
+namespace ApplicationCore.Filters
 {
     public class ApiExceptionFilterAttribute : ExceptionFilterAttribute
     {

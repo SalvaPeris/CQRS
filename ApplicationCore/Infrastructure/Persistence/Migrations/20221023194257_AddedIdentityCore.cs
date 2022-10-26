@@ -1,9 +1,8 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace PruebaCQRS.Infrastructure.Persistence.Migrations
+namespace ApplicationCore.Infrastructure.Persistence.Migrations
 {
     public partial class AddedIdentityCore : Migration
     {

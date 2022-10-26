@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace PruebaCQRS.Migrations
+namespace ApplicationCore.Infrastructure.Persistence.Migrations
 {
     public partial class FirstMigration : Migration
     {

@@ -2,12 +2,10 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using PruebaCQRS.Infrastructure.Persistence;
 
 #nullable disable
 
-namespace PruebaCQRS.Migrations
+namespace ApplicationCore.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(MyAppDbContext))]
     [Migration("20221017161905_FirstMigration")]
