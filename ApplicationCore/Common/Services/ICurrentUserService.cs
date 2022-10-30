@@ -1,4 +1,4 @@
-﻿namespace ApplicationCore.Services
+﻿namespace ApplicationCore.Common.Services
 {
     public interface ICurrentUserService
     {
@@ -7,5 +7,5 @@
         bool IsInRole(string roleName);
     }
 
-    public record CurrentUser(string Id, string UserName);
+    public record CurrentUser(string Id, string UserName, bool authenticated);
 }

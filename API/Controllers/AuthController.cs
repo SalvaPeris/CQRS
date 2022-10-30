@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ApplicationCore.Features.Auth.Command;
 using System.Runtime.Serialization;
-using ApplicationCore.Services;
+using ApplicationCore.Common.Services;
 
 namespace API.Controllers
 {

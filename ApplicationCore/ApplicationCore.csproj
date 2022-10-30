@@ -24,6 +24,8 @@
     <None Remove="Microsoft.EntityFrameworkCore.Sqlite" />
     <None Remove="Microsoft.AspNetCore.Authentication.JwtBearer" />
     <None Remove="AutoMapper" />
+    <None Remove="Common\Services\" />
+    <None Remove="Microsoft.EntityFrameworkCore.Design" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common\" />
@@ -34,6 +36,7 @@
     <Folder Include="Common\Exceptions\" />
     <Folder Include="Common\Helpers\" />
     <Folder Include="Infrastructure\Persistence\Seed\" />
+    <Folder Include="Common\Services\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
@@ -44,5 +47,9 @@
     <PackageReference Include="Hashids.net" Version="1.6.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.10" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.10">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
 </Project>

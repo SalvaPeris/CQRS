@@ -5,6 +5,7 @@ namespace ApplicationCore.Common.Exceptions
     public class ValidationException : Exception
     {
         public IDictionary<string, string[]> Errors { get; set; }
+
         public ValidationException() : base("Una o más validaciones han fallado.")
         {
             Errors = new Dictionary<string, string[]>();
