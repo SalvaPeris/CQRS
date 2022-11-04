@@ -1,7 +1,7 @@
 using API;
 using ApplicationCore;
 using ApplicationCore.Infrastructure.Persistence.Seed;
-using ApplicationCore.Services;
+using ApplicationCore.Common.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

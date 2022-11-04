@@ -1,6 +1,6 @@
 ﻿namespace ApplicationCore.Common.Domain
 {
-    public class Product
+    public class Product : BaseEntidad
     {
         public int ProductId { get; set; }
 
