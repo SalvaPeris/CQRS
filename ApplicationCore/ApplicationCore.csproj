@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Library</OutputType>
@@ -29,12 +29,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common\" />
-    <Folder Include="Infrastructure\" />
     <Folder Include="Features\" />
     <Folder Include="Common\Domain\" />
     <Folder Include="Common\Behaviour\" />
     <Folder Include="Common\Exceptions\" />
     <Folder Include="Common\Helpers\" />
+    <Folder Include="Infrastructure\Persistence\Migrations\" />
     <Folder Include="Infrastructure\Persistence\Seed\" />
     <Folder Include="Common\Services\" />
   </ItemGroup>
