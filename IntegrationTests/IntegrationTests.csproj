@@ -21,4 +21,10 @@
     <ProjectReference Include="..\API\API.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Features\Auth\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Features\Auth\" />
+  </ItemGroup>
 </Project>

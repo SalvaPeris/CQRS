@@ -20,7 +20,7 @@ namespace ApplicationCore.Common.Services
 
             // El Http Request existe pero es un usuario no autenticado
             var httpContext = _httpContextAccessor.HttpContext;
-            if(httpContext!.User!.Identity!.IsAuthenticated == true)
+            if(httpContext!.User!.Identity!.IsAuthenticated == false)
             {
                 User = new CurrentUser(Guid.Empty.ToString(), string.Empty, false);
                 return;
@@ -37,7 +37,7 @@ namespace ApplicationCore.Common.Services
 
         public CurrentUser User { get; }
 
-        public bool IsInRole(string roleName) => _httpContextAccessor.HttpContext!.User.IsInRole(roleName);
+        public bool IsInRole(string roleName) => _httpContextAccessor!.HttpContext!.User.IsInRole(roleName);
 
     }
 }
